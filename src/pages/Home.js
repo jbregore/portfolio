@@ -135,7 +135,10 @@ const Home = () => {
                         paddingRight: 30, paddingLeft: 30,
                         backgroundColor: '#ff4c60', color: "#fff"
                     }}>
-                        View CV
+                        <a href="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/_Resume%20(1).pdf?alt=media&token=67dd3132-ffa1-46c2-bb67-26562b555ada" target="_blank" rel="noreferrer" style={{
+                            textDecoration: 'none', color: '#fff'
+                        }}>View CV</a>
+                        
                     </Button>
 
                 </Box>
@@ -150,14 +153,15 @@ const Home = () => {
                             <GrainIcon style={{ fontSize: 50, postion: 'absolute', zIndex: -1, color: '#878787' }} />
                         </Grid>
                         <Grid item xs={10} >
-                            <Typography style={{ fontSize: 34, fontWeight: 'bold',
+                            <Typography style={{
+                                fontSize: 34, fontWeight: 'bold',
                                 // marginBottom: 50, marginLeft: 30
                             }} >
                                 About me
                             </Typography>
                         </Grid>
                     </Grid>
-                    <br/>
+                    <br />
 
 
                     <Grid container spacing={2} >
@@ -562,19 +566,20 @@ const Home = () => {
                     marginTop: 70,
                 }}>
 
-<Grid container style={{ width: 300 }}>
+                    <Grid container style={{ width: 300 }}>
                         <Grid item xs={2} >
                             <GrainIcon style={{ fontSize: 50, postion: 'absolute', zIndex: -1, color: '#878787' }} />
                         </Grid>
                         <Grid item xs={10} >
-                            <Typography style={{ fontSize: 34, fontWeight: 'bold',
+                            <Typography style={{
+                                fontSize: 34, fontWeight: 'bold',
                                 // marginBottom: 50, marginLeft: 30
                             }} >
                                 Contact me
                             </Typography>
                         </Grid>
                     </Grid>
-                    <br/>
+                    <br />
 
                     <Grid container spacing={2} >
                         <Grid item sm={4} xs={12}>
