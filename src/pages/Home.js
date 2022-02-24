@@ -26,6 +26,7 @@ import { toggleTheme, getTheme } from "../redux/actions/uiAction";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
+
 const Home = () => {
     const ui = useSelector((state) => state.ui);
     const THEME = createTheme(theme(ui.isDarkMode));
@@ -76,6 +77,15 @@ const Home = () => {
             opacity: 1,
             backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
             borderRadius: 20 / 2,
+        },
+    }));
+
+    const Root = styled('div')(({ theme }) => ({
+        [theme.breakpoints.down('sm')]: {
+            width: '90%'
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '70%'
         },
     }));
 
@@ -138,16 +148,18 @@ const Home = () => {
                         <a href="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/_Resume%20(1).pdf?alt=media&token=67dd3132-ffa1-46c2-bb67-26562b555ada" target="_blank" rel="noreferrer" style={{
                             textDecoration: 'none', color: '#fff'
                         }}>View CV</a>
-                        
+
                     </Button>
 
                 </Box>
 
-                <Box style={{
-                    width: '70%',
+                <Root style={{
                     margin: 'auto',
                     // color: "#14265c",
-                }}>
+                }}
+                // md={{width: '70%'}}
+                // sm={{ width: '90%' }}
+                >
                     <Grid container style={{ width: 300 }}>
                         <Grid item xs={2} >
                             <GrainIcon style={{ fontSize: 50, postion: 'absolute', zIndex: -1, color: '#878787' }} />
@@ -236,10 +248,9 @@ const Home = () => {
                     </Grid>
 
 
-                </Box>
+                </Root>
 
-                <Box style={{
-                    width: '70%',
+                <Root style={{
                     margin: 'auto',
                     // color: "#14265c",
                     marginTop: 60
@@ -364,10 +375,9 @@ const Home = () => {
                             </Card>
                         </Grid>
                     </Grid>
-                </Box>
+                </Root>
 
-                <Box style={{
-                    width: '70%',
+                <Root style={{
                     margin: 'auto',
                     // color: "#14265c",
                     marginTop: 70
@@ -557,10 +567,9 @@ const Home = () => {
                         The android apps made with react native, and web apps made with php and mysql upload is to be follow.
                     </Typography> */}
 
-                </Box>
+                </Root>
 
-                <Box style={{
-                    width: '70%',
+                <Root style={{
                     margin: 'auto',
                     // color: "#14265c",
                     marginTop: 70,
@@ -626,7 +635,7 @@ const Home = () => {
                     </Grid>
 
 
-                </Box>
+                </Root>
 
             </Paper>
         </ThemeProvider>
