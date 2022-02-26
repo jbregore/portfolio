@@ -8,7 +8,6 @@ import { CardActionArea, CardActions, TextField, Paper } from '@mui/material';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import GrainIcon from '@mui/icons-material/Grain';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
