@@ -137,7 +137,6 @@ const Home = () => {
                     <Box style={{ marginTop: 10, cursor: 'pointer' }}>
                         <FacebookIcon style={{ fontSize: 30, marginRight: 7 }} onClick={() => window.open("https://www.facebook.com/johnbenedict.regore.9")} />
                         <GitHubIcon style={{ fontSize: 30, marginRight: 7 }} onClick={() => window.open("https://github.com/jbregore")} />
-                        <LinkedInIcon style={{ fontSize: 30 }} />
                     </Box>
 
                     <Button variant="contained" style={{
@@ -501,7 +500,7 @@ const Home = () => {
                                 </CardActionArea>
                                 <CardActions>
                                     <Button size="small" color="primary" style={{ marginLeft: 'auto' }}>
-                                        <a href="https://www.mediafire.com/file/dfbzypna7au1ja9/wefixit.apk/file" target="_blank" rel="noreferrer" style={{
+                                        <a href="https://drive.google.com/file/d/1xZGsduTM10c5JPqHIQCsF_tz0xWKElvR/view?usp=sharing" target="_blank" rel="noreferrer" style={{
                                             textDecoration: 'none', color: '#ff4c60'
                                         }}>View</a>
                                     </Button>
