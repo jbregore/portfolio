@@ -507,32 +507,7 @@ const Home = () => {
                                 </CardActions>
                             </Card>
                         </Grid>
-                        <Grid item sm={4} xs={12}>
-                            <Card sx={{ maxWidth: 345, boxShadow: 3, height: 300 }}>
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        height="140"
-                                        image="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/sad.png?alt=media&token=6fac383b-1fd7-4556-ac7f-d18398bbba99"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h6" component="div">
-                                            Student Review
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            made with react js, firebase and redux
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                    <Button size="small" color="primary" style={{ marginLeft: 'auto' }}>
-                                        <a href="https://7fa22fb3.redux-midterm.pages.dev/studentlist" target="_blank"
-                                            rel="noreferrer"
-                                            style={{ textDecoration: 'none', color: '#ff4c60', marginTop: 20 }}>View</a>
-                                    </Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
+
                         <Grid item sm={4} xs={12}>
                             <Card sx={{ maxWidth: 345, boxShadow: 3, height: 300 }}>
                                 <CardActionArea>
@@ -560,6 +535,34 @@ const Home = () => {
                                 </CardActions>
                             </Card>
                         </Grid>
+
+                        <Grid item sm={4} xs={12}>
+                            <Card sx={{ maxWidth: 345, boxShadow: 3, height: 300 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/sad.png?alt=media&token=6fac383b-1fd7-4556-ac7f-d18398bbba99"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="div">
+                                            Student Review
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            made with react js, firebase and redux
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button size="small" color="primary" style={{ marginLeft: 'auto' }}>
+                                        <a href="https://7fa22fb3.redux-midterm.pages.dev/studentlist" target="_blank"
+                                            rel="noreferrer"
+                                            style={{ textDecoration: 'none', color: '#ff4c60', marginTop: 20 }}>View</a>
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                        
                     </Grid><br /><br />
 
                     <Grid container spacing={2}>
