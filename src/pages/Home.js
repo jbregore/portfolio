@@ -8,7 +8,7 @@ import { CardActionArea, CardActions, TextField, Paper } from '@mui/material';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import GrainIcon from '@mui/icons-material/Grain';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
@@ -592,6 +592,32 @@ const Home = () => {
                                 </CardActions>
                             </Card>
                         </Grid>
+                        <Grid item sm={4} xs={12}>
+                            <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/hulu.png?alt=media&token=06138850-6250-469f-8c9f-239e2c82815f"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="div">
+                                            Hulu clone
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            Hulu UI made with next js, tailwind css
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button size="small" color="primary" style={{ marginLeft: 'auto' }}>
+                                        <a href="https://hulu-clone-f0irwfhvo-jbregore.vercel.app/" target="_blank" rel="noreferrer" style={{
+                                            textDecoration: 'none', color: '#ff4c60', marginTop: 20
+                                        }}>View</a>
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
                     </Grid><br /><br />
                     {/* <Typography><br />
                         The android apps made with react native, and web apps made with php and mysql upload is to be follow.
@@ -626,7 +652,7 @@ const Home = () => {
                                 Lets talk about everything
                             </Typography><br />
                             <Typography>
-                                Don't like forms? send me an <u style={{ cursor: 'pointer', color: '#ff4c60' }} >email</u>
+                                Don't like forms? send me an email at <u style={{ cursor: 'pointer', color: '#ff4c60' }} >jbbbregore099@gmail.com</u>
                             </Typography>
                         </Grid>
                         <Grid item sm={8} xs={12} >
