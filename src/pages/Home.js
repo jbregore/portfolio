@@ -8,6 +8,13 @@ import { CardActionArea, CardActions, TextField, Paper } from '@mui/material';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import CodeIcon from '@mui/icons-material/Code';
+import WebIcon from '@mui/icons-material/Web';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
 // import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import GrainIcon from '@mui/icons-material/Grain';
@@ -21,11 +28,10 @@ import theme from "../utils/theme";
 
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme, getTheme } from "../redux/actions/uiAction";
-
+import { Link } from 'react-scroll';
 
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
 
 const Home = () => {
     const ui = useSelector((state) => state.ui);
@@ -100,29 +106,53 @@ const Home = () => {
     return (
         <ThemeProvider theme={THEME}>
             <Paper
-                style={{ paddingBottom: 100 }}
+                style={{ paddingBottom: 100, position: "relative" }}
             //  style={{ backgroundColor: (theme) => theme.palette.background.default }} 
             // sx={{bgColor: 'red' '#f7f7f7'}}
             // sx={{ bgcolor: 'background.default' }}
             >
-                <FormControlLabel
-                    control={<MaterialUISwitch sx={{ m: 1 }}
-                        defaultChecked={ui.isDarkMode}
-                    />}
-                    label=""
-                    style={{ float: 'right' }}
-                    onClick={changeTheme}
-                />
+                <div style={{ display: 'flex' }}>
+                    <div style={{
+                        display: 'flex', width: 150, height: 80,
+                        alignItems: 'center', justifyContent: 'flex-start', paddingLeft: 20,
+                        flexGrow: 1
+                    }}>
+                        <Fab aria-label="add" variant="extended" style={{ height: 40, backgroundColor: "#555",
+                         color: '#fff', paddingTop: 10 }}>
+                            <Link to="home" spy={true} smooth={true}><HomeIcon sx={{ mr: 2 }} /></Link>
+                            <Link to="about" spy={true} smooth={true}><InfoIcon sx={{ mr: 2 }} /></Link>
+                            <Link to="skills" spy={true} smooth={true}><CodeIcon sx={{ mr: 2 }} /></Link>
+                            <Link to="project" spy={true} smooth={true}><WebIcon sx={{ mr: 2 }} /></Link>
+                            <Link to="contact" spy={true} smooth={true}><ContactMailIcon sx={{ mr: 2 }} /></Link>
+                            
+                        </Fab>
+                        {/* <Fab aria-label="add" style={{width: 40, height: 40, marginLeft: 10}}>
+                            <InfoIcon />
+                        </Fab> */}
+                    </div>
+
+                    <FormControlLabel
+                        control={<MaterialUISwitch sx={{ m: 1 }}
+                            defaultChecked={ui.isDarkMode}
+                        />}
+                        label=""
+                        style={{ float: 'right' }}
+                        onClick={changeTheme}
+                    />
+                </div>
+
+
                 <Box style={{
                     width: '100%', height: 750,
                     display: 'flex', flexDirection: 'column',
                     alignItems: 'center', justifyContent: 'center',
                     // color: "#14265c"
-                }}>
+                }} id="home">
                     <img
                         alt=""
                         style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: '50%' }}
                         src="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/274213862_253831063584385_2282428805788619329_n.jpg?alt=media&token=d4d442a6-8d7f-4abf-88d3-1bc9b34ea282" />
+
 
                     <Typography style={{ marginTop: 10, fontSize: 34, fontWeight: 'bold' }} >
                         Jb Regore
@@ -156,6 +186,7 @@ const Home = () => {
                     margin: 'auto',
                     // color: "#14265c",
                 }}
+                id="about"
                 // md={{width: '70%'}}
                 // sm={{ width: '90%' }}
                 >
@@ -253,7 +284,9 @@ const Home = () => {
                     margin: 'auto',
                     // color: "#14265c",
                     marginTop: 60
-                }}>
+                }}
+                id="skills"
+                >
 
                     <Grid container style={{ width: 300 }}>
                         <Grid item xs={2} >
@@ -380,7 +413,9 @@ const Home = () => {
                     margin: 'auto',
                     // color: "#14265c",
                     marginTop: 70
-                }}>
+                }}
+                id="project"
+                >
 
                     <Grid container style={{ width: 300 }}>
                         <Grid item xs={2} >
@@ -562,7 +597,7 @@ const Home = () => {
                                 </CardActions>
                             </Card>
                         </Grid>
-                        
+
                     </Grid><br /><br />
 
                     <Grid container spacing={2}>
@@ -618,6 +653,32 @@ const Home = () => {
                                 </CardActions>
                             </Card>
                         </Grid>
+                        <Grid item sm={4} xs={12}>
+                            <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image="https://firebasestorage.googleapis.com/v0/b/midterm-redux.appspot.com/o/cryptoverse.png?alt=media&token=964aca68-e3f9-4d7e-b528-22514752fa61"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="div">
+                                            Cryptoverse
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            Crypto tracker made with react js, redux toolkit
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button size="small" color="primary" style={{ marginLeft: 'auto' }}>
+                                        <a href="https://cryptoverse-clone.pages.dev/" target="_blank" rel="noreferrer" style={{
+                                            textDecoration: 'none', color: '#ff4c60'
+                                        }}>View</a>
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
                     </Grid><br /><br />
                     {/* <Typography><br />
                         The android apps made with react native, and web apps made with php and mysql upload is to be follow.
@@ -629,7 +690,9 @@ const Home = () => {
                     margin: 'auto',
                     // color: "#14265c",
                     marginTop: 70,
-                }}>
+                }}
+                id="contact"
+                >
 
                     <Grid container style={{ width: 300 }}>
                         <Grid item xs={2} >
